@@ -1,0 +1,20 @@
+{
+  "name": "env1",
+  "description": "env1 test environment",
+  "cookbook_versions": {
+  },
+  "json_class": "Chef::Environment",
+  "chef_type": "environment",
+  "default_attributes": {
+    "some_default_attr": {
+      "some_default_attr_nested": "some_default_attr_nested_key_from_env1"
+    },
+    "some_default_attr_flat": "some_default_attr_value_from_env1"
+  },
+  "override_attributes": {
+    "some_override_attr": {
+      "some_override_attr_nested": "some_override_attr_nested_value_from_env1"
+    },
+    "some_override_attr_flat": "some_override_attr_value_from_env1"
+  }
+}
