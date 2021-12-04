@@ -1,0 +1,26 @@
+name: cookbook
+
+on:
+  push:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    env:
+      CHEF_LICENSE: accept-no-persist
+    steps:
+      - name: Check Out Code
+        uses: actions/checkout@v2
+      - name: install chef-workstation
+        uses: actionshub/chef-install@main
+      - name: Cookstyle Check
+        run: cookstyle .
+      - name: Run Rake Task
+        run: chef exec rake policyfiles_from_environment_files
+      - name: Unit Test
+        run: chef exec rspec
+      - name: Kitchen Test
+        run: kitchen test
