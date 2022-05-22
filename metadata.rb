@@ -1,6 +1,6 @@
 name 'policyfiles_from_env_files'
 maintainer 'Collin McNeese'
-maintainer_email 'cmcneese@chef.io'
+maintainer_email 'collin@mydevsandbox.com'
 license 'Apache-2.0'
 description 'Installs/Configures policyfiles_from_env_files'
 version '0.1.0'
